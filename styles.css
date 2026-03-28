@@ -763,3 +763,29 @@ footer {
   .services-grid { grid-template-columns: 1fr; }
   .hero-title { font-size: 3rem; }
 }
+@media(max-width: 480px){
+  .about-image {
+    /* height: 290px; */
+    width: 380px;
+    margin: 0 auto;
+  }
+  .hero-actions {
+    flex-direction: column;
+    gap: 15px;
+  }
+  .hero-title { font-size: 2.5rem; }
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    align-content: center;
+  }
+  .portfolio-item {
+    align-items: center;
+    width: 320px;
+  }
+  .about-text, .contact-info, .contact-form { padding: 20px; }
+  .contact-item {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+  
