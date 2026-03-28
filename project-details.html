@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Case Study | Ashim Kumal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">ASHIM<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Back to Portfolio</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="project-header">
+            <img src="https://images.unsplash.com/photo-1545239351-ef35f43d514b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Project Banner" class="project-header-bg">
+            <div class="project-title-box">
+                <span class="project-meta">UI/UX Design &bull; 2026</span>
+                <h1 class="project-title">Digital Dashboard</h1>
+            </div>
+        </div>
+
+        <div class="project-content">
+            <a href="index.html#portfolio" class="back-link"><i class="ph ph-arrow-left"></i> Back to All Works</a>
+            
+            <div class="project-text">
+                <h3>The Challenge</h3>
+                <p>Creating a seamless data visualization tool for enterprise finance teams. The project required merging vast amounts of raw data into an intuitive, visually robust interface that could be heavily customized by end users while maintaining peak performance.</p>
+                
+                <h3>The Approach</h3>
+                <p>By conducting thorough user research and mapping out wireframes in Figma, I structured the interface around clarity and dark-mode aesthetic principles. This reduces eye strain for analysts working long hours. Micro-interactions and cinematic transitions were prototyped to ensure a premium feel across all breakpoints.</p>
+            </div>
+
+            <h3 style="color:var(--text-main); font-family:var(--font-heading); font-size:2rem; margin-bottom:30px; text-transform:uppercase;">Motion & Interaction Details</h3>
+            <div class="video-container">
+                <!-- Using a standard YouTube placeholder for video explanation -->
+                <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ?autoplay=0&controls=1" allowfullscreen></iframe>
+            </div>
+
+            <h3 style="color:var(--text-main); font-family:var(--font-heading); font-size:2rem; margin-top:60px; margin-bottom:30px; text-transform:uppercase;">Project Gallery</h3>
+            <div class="photo-gallery">
+                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Wireframes">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Screen Integration">
+                <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Data Visualization Overlay">
+                <img src="https://images.unsplash.com/photo-1555421689-d68471e189f2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Mobile Implementation">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Ashim Kumal. Crafted with passion.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>
