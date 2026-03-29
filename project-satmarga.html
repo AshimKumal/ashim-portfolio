@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satmarga Education Consultancy | Ashim Kumal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">ASHIM<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Back to Portfolio</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="project-header">
+            <img src="https://ashimkumal.com.np/wp-content/uploads/2025/06/satmarga-education-consultancy-min-scaled.png" alt="Satmarga Education Consultancy" class="project-header-bg">
+            <div class="project-title-box">
+                <span class="project-meta">Graphic Design &bull; 2024</span>
+                <h1 class="project-title">Satmarga Education Consultancy</h1>
+            </div>
+        </div>
+
+        <div class="project-content">
+            <a href="index.html#portfolio" class="back-link"><i class="ph ph-arrow-left"></i> Back to All Works</a>
+            
+            <div class="project-text">
+                <h3>The Challenge</h3>
+                <p>Developing a cohesive brand identity for Satmarga Education Consultancy that conveys trust, professionalism, and global reach. The design needed to resonate with students aspiring for international education while maintaining a clean, academic, yet modern aesthetic across all marketing collateral.</p>
+                
+                <h3>The Approach</h3>
+                <p>I focused on a sophisticated color palette and strong typography to establish a premium presence. For the marketing assets, I prioritized clear information hierarchy and impactful visual storytelling. The resulting design system ensures a consistent and trustworthy brand image across digital and print media, effectively supporting the consultancy's mission to guide students towards their academic goals.</p>
+            </div>
+
+            <h3 style="color:var(--text-main); font-family:var(--font-heading); font-size:2rem; margin-top:60px; margin-bottom:30px; text-transform:uppercase;">Project Gallery</h3>
+            <div class="photo-gallery">
+                <img src="https://ashimkumal.com.np/wp-content/uploads/2025/06/satmarga-education-consultancy-min-scaled.png" alt="Satmarga Education Visual 1">
+                <img src="https://ashimkumal.com.np/wp-content/uploads/2025/06/satmarga-education-consultancy-min-scaled.png" alt="Satmarga Education Visual 2">
+                <img src="./images/satmarga-holi.jpg" alt="Satmarga Holi Festival Promo">
+                <img src="./images/satmarga-achiever-dishan.png" alt="IELTS Achiever Dishan Bhandari">
+                <img src="./images/satmarga-band-bishal.png" alt="IELTS Congratulations Bishal Pun">
+                <img src="./images/satmarga-intake-may2025.png" alt="May 2025 Intake Now Open">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Ashim Kumal. Crafted with passion.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

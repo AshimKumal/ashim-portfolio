@@ -17,6 +17,10 @@
         href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap"
         rel="stylesheet">
 
+    <!-- Custom Cursor -->
+    <div class="custom-cursor"></div>
+    <div class="custom-cursor-outline"></div>
+
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
@@ -45,7 +49,10 @@
                 alt="Cinematic Hero Background" class="hero-bg">
             <div class="hero-content">
                 <span class="hero-subtitle">Visual Designer & 3D Animator</span>
-                <h1 class="hero-title">ASHIM<br>KUMAL</h1>
+                <h1 class="hero-title">
+                    <span class="mask-up"><span>ASHIM</span></span><br>
+                    <span class="mask-up"><span>KUMAL</span></span>
+                </h1>
                 <p class="hero-description">
                     I translate bold ideas into stunning visual realities. There is no art without an artist, and no
                     design without a designer.
@@ -150,9 +157,9 @@
             </div>
         </section>
 
-        <!-- Services Section -->
+        <!-- Services Section --><!-- Staggered Reveal -->
         <section id="services" class="services">
-            <div class="services-grid reveal">
+            <div class="services-grid reveal reveal-stagger">
                 <div class="service-card">
                     <div class="service-icon"><i class="ph ph-device-mobile"></i></div>
                     <h3>UI/UX Design</h3>
@@ -196,35 +203,35 @@
             </div>
         </section>
 
-        <!-- Skills Section -->
+        <!-- Skills Section --><!-- Staggered Reveal -->
         <section id="skills" class="skills section-padding">
             <div class="section-header reveal">
                 <h2 class="section-title">Software Arsenal</h2>
                 <div class="section-line"></div>
             </div>
-            <div class="skills-grid reveal">
+            <div class="skills-grid reveal reveal-stagger">
                 <div class="skill-card">
-                    <div class="skill-icon"><i class="ph ph-figma-logo"></i></div>
-                    <h3>Figma / XD</h3>
-                    <p>UI/UX Design Workflow</p>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 95%"></div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"><i class="ph ph-image"></i></div>
-                    <h3>Photoshop</h3>
-                    <p>Graphic Design & Comp</p>
+                    <div class="skill-icon"><i class="ph ph-pen-nib"></i></div>
+                    <h3>Photoshop, Illustrator, InDesign</h3>
+                    <p>Graphic Design</p>
                     <div class="progress-bar">
                         <div class="progress" style="width: 90%"></div>
                     </div>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon"><i class="ph ph-cube"></i></div>
-                    <h3>Blender / Maya</h3>
-                    <p>3D Animation & VFX</p>
+                    <h3>Maya, ZBrush, Substance Painter</h3>
+                    <p>3D Animation and VFX</p>
                     <div class="progress-bar">
                         <div class="progress" style="width: 88%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <div class="skill-icon"><i class="ph ph-figma-logo"></i></div>
+                    <h3>Figma, Photoshop</h3>
+                    <p>UI/UX Design Workflow</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 95%"></div>
                     </div>
                 </div>
                 <div class="skill-card">
@@ -232,7 +239,7 @@
                     <h3>Premiere Pro</h3>
                     <p>Video Editing</p>
                     <div class="progress-bar">
-                        <div class="progress" style="width: 80%"></div>
+                        <div class="progress" style="width: 85%"></div>
                     </div>
                 </div>
                 <div class="skill-card">
@@ -240,21 +247,13 @@
                     <h3>After Effects</h3>
                     <p>Motion Graphics</p>
                     <div class="progress-bar">
-                        <div class="progress" style="width: 85%"></div>
-                    </div>
-                </div>
-                <div class="skill-card">
-                    <div class="skill-icon"><i class="ph ph-code"></i></div>
-                    <h3>HTML / CSS</h3>
-                    <p>Web Prototyping</p>
-                    <div class="progress-bar">
-                        <div class="progress" style="width: 75%"></div>
+                        <div class="progress" style="width: 88%"></div>
                     </div>
                 </div>
                 <div class="skill-card">
                     <div class="skill-icon"><i class="ph ph-compass-tool"></i></div>
                     <h3>AutoCAD</h3>
-                    <p>Architectural Drafting</p>
+                    <p>Architectural Drawing</p>
                     <div class="progress-bar">
                         <div class="progress" style="width: 85%"></div>
                     </div>
@@ -264,7 +263,7 @@
                     <h3>SketchUp</h3>
                     <p>3D Prev & Layout</p>
                     <div class="progress-bar">
-                        <div class="progress" style="width: 82%"></div>
+                        <div class="progress" style="width: 85%"></div>
                     </div>
                 </div>
             </div>
@@ -283,46 +282,147 @@
                 <button class="filter-btn active" data-filter="all">All</button>
                 <button class="filter-btn" data-filter="uiux">UI/UX</button>
                 <button class="filter-btn" data-filter="graphic">Graphic Design</button>
+                <button class="filter-btn" data-filter="architecture">Architecture</button>
                 <button class="filter-btn" data-filter="3d">3D Animation</button>
                 <button class="filter-btn" data-filter="motion">Video/Motion</button>
             </div>
-            <div class="portfolio-grid reveal">
-                <a href="project-details.html" class="portfolio-item mix uiux">
-                    <img src="https://images.unsplash.com/photo-1545239351-ef35f43d514b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                        alt="UI Dashboard">
+            <div class="portfolio-grid reveal reveal-stagger">
+                <!-- Architecture Projects -->
+                <a href="project-premium-apartment.html" class="portfolio-item mix architecture featured">
+                    <img src="images/building 02.jpg" alt="Premium Residential Complex">
                     <div class="portfolio-overlay">
-                        <span class="category">UI/UX Design</span>
-                        <h3>Digital Dashboard</h3>
+                        <span class="category">Architectural Design</span>
+                        <h3>Premium Residential Complex</h3>
                         <span class="btn-primary btn-small" style="margin-top: 20px;">View Case Study</span>
                     </div>
                 </a>
-                <a href="project-details.html" class="portfolio-item mix 3d">
-                    <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                        alt="3D Model">
+                <a href="project-office-interior.html" class="portfolio-item mix architecture">
+                    <img src="images/collage office (1).jpg" alt="Executive Office Interior">
                     <div class="portfolio-overlay">
-                        <span class="category">3D Design & VFX</span>
-                        <h3>Abstract Architecture</h3>
+                        <span class="category">Interior Design</span>
+                        <h3>Executive Office Interior</h3>
                         <span class="btn-primary btn-small" style="margin-top: 20px;">View Case Study</span>
                     </div>
                 </a>
-                <a href="project-details.html" class="portfolio-item mix motion">
-                    <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                        alt="Motion Graphics">
+                <a href="project-modern-house.html" class="portfolio-item mix architecture featured">
+                    <img src="images/house.jpg" alt="Modern Minimalist House">
                     <div class="portfolio-overlay">
-                        <span class="category">Video / Motion</span>
-                        <h3>Commercial Reel</h3>
+                        <span class="category">Architectural Rendering</span>
+                        <h3>Modern Minimalist House</h3>
                         <span class="btn-primary btn-small" style="margin-top: 20px;">View Case Study</span>
                     </div>
                 </a>
-                <a href="project-details.html" class="portfolio-item mix graphic">
-                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                        alt="Architectural Blueprint">
+                
+                <a href="project-attit.html" class="portfolio-item mix uiux featured">
+                    <img src="https://ashimkumal.com.np/wp-content/uploads/2025/06/web-2.png" alt="Web Interface Design">
+                    <div class="portfolio-overlay">
+                        <span class="category">Web Architecture</span>
+                        <h3>Attit Aquarium & Hookha Shop</h3>
+                        <span class="btn-primary btn-small" style="margin-top: 20px;">View Case Study</span>
+                    </div>
+                </a>
+                <a href="project-satmarga.html" class="portfolio-item mix graphic featured">
+                    <img src="https://ashimkumal.com.np/wp-content/uploads/2025/06/satmarga-education-consultancy-min-scaled.png" alt="Satmarga Education Consultancy">
                     <div class="portfolio-overlay">
                         <span class="category">Graphic Design</span>
-                        <h3>Creative Concepts</h3>
+                        <h3>Satmarga Education</h3>
                         <span class="btn-primary btn-small" style="margin-top: 20px;">View Case Study</span>
                     </div>
                 </a>
+                <a href="project-nepalworld.html" class="portfolio-item mix graphic">
+                    <img src="https://ashimkumal.com.np/wp-content/uploads/2025/06/nepal-world-education-min-scaled.png" alt="Nepal World Education">
+                    <div class="portfolio-overlay">
+                        <span class="category">Graphic Design</span>
+                        <h3>Nepal World Education</h3>
+                        <span class="btn-primary btn-small" style="margin-top: 20px;">View Case Study</span>
+                    </div>
+                </a>
+                <a href="project-scooter-3d.html" class="portfolio-item mix 3d featured">
+                    <img src="images/scooter].jpg" alt="Blue Scooter 3D Modeling">
+                    <div class="portfolio-overlay">
+                        <span class="category">3D Animation</span>
+                        <h3>Blue Scooter 3D Model</h3>
+                        <span class="btn-primary btn-small" style="margin-top: 20px;">View Case Study</span>
+                    </div>
+                </a>
+                <a href="project-alic.html" class="portfolio-item mix graphic">
+                    <img src="https://ashimkumal.com.np/wp-content/uploads/2025/06/ACIC-min-scaled.png" alt="ACIC Design">
+                    <div class="portfolio-overlay">
+                        <span class="category">Graphic Design</span>
+                        <h3>ACIC Design</h3>
+                        <span class="btn-primary btn-small" style="margin-top: 20px;">View Case Study</span>
+                    </div>
+                </a>
+                <a href="project-longlife.html" class="portfolio-item mix graphic">
+                    <img src="https://ashimkumal.com.np/wp-content/uploads/2025/06/longlife-pharma-min-1-scaled.png" alt="Longlife Pharma">
+                    <div class="portfolio-overlay">
+                        <span class="category">Graphic Design</span>
+                        <h3>Longlife Pharma</h3>
+                        <span class="btn-primary btn-small" style="margin-top: 20px;">View Case Study</span>
+                    </div>
+                </a>
+
+                <!-- Brand Guidelines Project -->
+                <a href="project-brand-guides.html" class="portfolio-item mix graphic">
+                    <img src="./images/brand-guide-atithi.jpg" alt="Brand Identity Systems">
+                    <div class="portfolio-overlay">
+                        <span class="category">Creative Direction</span>
+                        <h3>Visual Identity Systems</h3>
+                        <span class="btn-primary btn-small" style="margin-top: 20px;">View Brand Guidelines</span>
+                    </div>
+                </a>
+                
+                <!-- Video Portfolio Items -->
+                <div class="portfolio-item mix motion video-item featured" data-video-id="FSMpb6QFsHg">
+                    <img src="https://img.youtube.com/vi/FSMpb6QFsHg/maxresdefault.jpg" alt="Archival Boxes Preservation">
+                    <div class="portfolio-overlay">
+                        <span class="category">Video Editing</span>
+                        <h3>Archival Boxes Preservation</h3>
+                        <span class="btn-primary btn-small" style="margin-top: 20px;"><i class="ph ph-play-circle"></i> Play Video</span>
+                    </div>
+                </div>
+                <div class="portfolio-item mix motion video-item" data-video-id="0XpANGxFL7A">
+                    <img src="https://img.youtube.com/vi/0XpANGxFL7A/maxresdefault.jpg" alt="Ancient Manuscripts Digitization">
+                    <div class="portfolio-overlay">
+                        <span class="category">Video Editing</span>
+                        <h3>Digitization Process</h3>
+                        <span class="btn-primary btn-small" style="margin-top: 20px;"><i class="ph ph-play-circle"></i> Play Video</span>
+                    </div>
+                </div>
+                <div class="portfolio-item mix motion video-item" data-video-id="T3tpep5iPuA">
+                    <img src="https://img.youtube.com/vi/T3tpep5iPuA/maxresdefault.jpg" alt="The Silver Dharani Manuscript">
+                    <div class="portfolio-overlay">
+                        <span class="category">Video Editing</span>
+                        <h3>Silver Dharani Project</h3>
+                        <span class="btn-primary btn-small" style="margin-top: 20px;"><i class="ph ph-play-circle"></i> Play Video</span>
+                    </div>
+                </div>
+                <div class="portfolio-item mix motion video-item" data-video-id="hmncC_j8R8w">
+                    <img src="https://img.youtube.com/vi/hmncC_j8R8w/maxresdefault.jpg" alt="Hākusaphū - Death Ritual & Conservation">
+                    <div class="portfolio-overlay">
+                        <span class="category">Video Editing</span>
+                        <h3>Ritual & Conservation</h3>
+                        <span class="btn-primary btn-small" style="margin-top: 20px;"><i class="ph ph-play-circle"></i> Play Video</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Architecture Featured Section -->
+        <section id="architecture" class="architecture-featured reveal">
+            <div class="arch-bg">
+                <img src="images/building 02.jpg" alt="Architectural Excellence">
+            </div>
+            <div class="arch-content">
+                <span class="hero-subtitle">New Frontier</span>
+                <h2 class="section-title" style="color:#fff; text-align:left; font-size:4rem;">Architectural<br>Design</h2>
+                <p style="max-width:600px; color:rgba(255,255,255,0.8); font-size:1.2rem; margin-bottom:40px;">
+                    Translating structural concepts into immersive visual realities. From intricate interior layouts to large-scale residential developments, we bring precision and vision to every architectural narrative.
+                </p>
+                <div class="hero-actions">
+                    <a href="#portfolio" class="btn-primary">View All Projects <i class="ph ph-arrow-right"></i></a>
+                    <a href="#contact" class="btn-secondary">Request a Quote</a>
+                </div>
             </div>
         </section>
 
@@ -357,6 +457,7 @@
                     </div>
                 </div>
                 <form class="contact-form" id="contactForm">
+                    <h3 class="form-headline">Let's Create something impactful</h3>
                     <div class="form-group">
                         <input type="text" id="name" placeholder="YOUR NAME" required>
                     </div>
@@ -371,6 +472,7 @@
                     </div>
                     <button type="submit" class="btn-primary">Send Message <i
                             class="ph ph-paper-plane-tilt"></i></button>
+                    <p class="form-closing">the best ideas start with a simple conversation</p>
                 </form>
             </div>
         </section>
@@ -390,6 +492,16 @@
             });
         })();
     </script>
+    <!-- Video Modal -->
+    <div id="videoModal" class="video-modal">
+        <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <div class="video-wrapper">
+                <iframe id="modalIframe" src="" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
 

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attit Aquarium & Hookha Shop | Project Case Study</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <style>
+        .custom-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 60px;
+            margin-top: 40px;
+        }
+        .custom-gallery img {
+            width: 100%;
+            height: auto;
+            border: 2px solid var(--surface-border);
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            transition: var(--transition);
+        }
+        .custom-gallery img:hover {
+            border-color: var(--primary);
+            transform: scale(1.01);
+        }
+        .gallery-item {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .gallery-item h4 {
+            color: var(--primary);
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-family: var(--font-heading);
+        }
+        .gallery-item p {
+            color: var(--text-muted);
+            font-size: 1.05rem;
+            max-width: 800px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">ASHIM<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Back to Portfolio</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="project-header">
+            <img src="https://ashimkumal.com.np/wp-content/uploads/2025/06/web-2.png" alt="Project Banner" class="project-header-bg">
+            <div class="project-title-box">
+                <span class="project-meta">Web Architecture & UI/UX</span>
+                <h1 class="project-title">Attit Aquarium<br>& Hookha Shop</h1>
+            </div>
+        </div>
+
+        <div class="project-content">
+            <a href="index.html#portfolio" class="back-link"><i class="ph ph-arrow-left"></i> Back to All Works</a>
+            
+            <div class="project-text" style="max-width: 100%;">
+                <div style="margin-top: 20px; margin-bottom: 60px;">
+                    <img src="./images/description.png" alt="UI/UX Design Plan" style="width: 100%; border: 2px solid var(--surface-border); border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); object-fit: contain;">
+                </div>
+            </div>
+
+            <h3 style="color:var(--text-main); font-family:var(--font-heading); font-size:2rem; margin-top:20px; margin-bottom:40px; text-transform:uppercase;">Interface Modules</h3>
+            
+            <div class="custom-gallery">
+                <div class="gallery-item">
+                    <h4>1. Hero Aquarium Landing Module</h4>
+                    <p>Stunning 3-panel split layout presenting vivid underwater life to instantly captivate visitors exploring the aquarium sections.</p>
+                    <img src="./images/web-1-1.png" alt="Hero Aquarium Module" style="width: 100%; border: 2px solid var(--surface-border); border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);" onerror="this.src='./images/web-1.png'">
+                </div>
+
+                <div class="gallery-item">
+                    <h4>2. Lead Capture & Onboarding</h4>
+                    <p>Clean contact form implementing quick-select intent tags ("I am interested in... Shisha's, Vapes") to effortlessly guide prospective customers.</p>
+                    <img src="./images/web-2.png" alt="Lead Generation Interface" style="width: 100%; border: 2px solid var(--surface-border); border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                </div>
+
+                <div class="gallery-item">
+                    <h4>3. Hookah Focus Landing</h4>
+                    <p>Brutalist split-panel module designed specifically as a dark-mode funnel targeting shisha and vape enthusiasts with hyper-detailed product shots.</p>
+                    <img src="./images/web-4.png" alt="Hookah Landing Interface" style="width: 100%; border: 2px solid var(--surface-border); border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                </div>
+
+                <div class="gallery-item">
+                    <h4>4. Brand Story & About Us</h4>
+                    <p>A minimalist reading environment designed to tell the founding narrative of merging Nepali aquarium and hookah communities under a single umbrella.</p>
+                    <img src="./images/web-3.png" alt="Brand Story Interface" style="width: 100%; border: 2px solid var(--surface-border); border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                </div>
+
+                <div class="gallery-item">
+                    <h4>5. Category Navigation</h4>
+                    <p>Clean, card-based mobile-ready category navigation interface utilizing large imagery to direct users into specific sales funnels.</p>
+                    <img src="./images/catagories.jpg" alt="Explore By Categories Interface" style="width: 100%; border: 2px solid var(--surface-border); border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                </div>
+
+                <div class="gallery-item">
+                    <h4>6. E-Commerce Product Catalog</h4>
+                    <p>Structured product grid list for Hookahs presenting clear pricing and dynamic neon green actions over a brutalist black backdrop.</p>
+                    <img src="./images/hookhas.jpg" alt="Shop Catalog Interface" style="width: 100%; border: 2px solid var(--surface-border); border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                </div>
+
+                <div class="gallery-item">
+                    <h4>7. Single Product Architecture</h4>
+                    <p>High-conversion product page highlighting variant selection modules, multi-view image galleries, and essential data without clutter.</p>
+                    <img src="./images/hookhas-price.jpg" alt="Single Product Interface" style="width: 100%; border: 2px solid var(--surface-border); border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                </div>
+
+                <div class="gallery-item">
+                    <h4>8. Blog Strategy & Architecture</h4>
+                    <p>Information hub scaling content SEO with large hero-thumbnails, guiding users toward educational resources like hookha bowl reviews and flavor guides.</p>
+                    <img src="./images/web-5.png" alt="Content Blog Interface" style="width: 100%; border: 2px solid var(--surface-border); border-radius: 4px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Ashim Kumal. Crafted with passion.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

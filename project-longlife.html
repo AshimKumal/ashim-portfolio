@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Longlife Pharma | Ashim Kumal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">ASHIM<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Back to Portfolio</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="project-header">
+            <img src="https://ashimkumal.com.np/wp-content/uploads/2025/06/longlife-pharma-min-1-scaled.png" alt="Longlife Pharma" class="project-header-bg">
+            <div class="project-title-box">
+                <span class="project-meta">Graphic Design &bull; 2024</span>
+                <h1 class="project-title">Longlife Pharma Branding</h1>
+            </div>
+        </div>
+
+        <div class="project-content">
+            <a href="index.html#portfolio" class="back-link"><i class="ph ph-arrow-left"></i> Back to All Works</a>
+            
+            <div class="project-text">
+                <h3>The Challenge</h3>
+                <p>Creating a dependable and modern visual identity for Longlife Pharma. The branding needed to communicate safety, longevity, and innovation within the healthcare sector while remaining aesthetically pleasing and memorable.</p>
+                
+                <h3>The Approach</h3>
+                <p>I leaned into a clean, minimal design aesthetic with a palette that evokes calm and trust. The primary goal was to ensure all visual assets, from corporate stationery to digital materials, work together to project a unified and professional image for the pharmaceutical company. The final branding project achieved a high-impact, refined look that establishes a strong presence for Longlife Pharma in a competitive marketplace.</p>
+            </div>
+
+            <h3 style="color:var(--text-main); font-family:var(--font-heading); font-size:2rem; margin-top:60px; margin-bottom:30px; text-transform:uppercase;">Project Gallery</h3>
+            <div class="photo-gallery">
+                <img src="https://ashimkumal.com.np/wp-content/uploads/2025/06/longlife-pharma-min-1-scaled.png" alt="Longlife Pharma Visual 1">
+                <img src="https://ashimkumal.com.np/wp-content/uploads/2025/06/longlife-pharma-min-1-scaled.png" alt="Longlife Pharma Visual 2">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Ashim Kumal. Crafted with passion.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

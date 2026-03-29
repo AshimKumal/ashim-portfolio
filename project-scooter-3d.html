@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Scooter 3D Modeling | 3D Animation</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">ASHIM<span>.</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Back to Portfolio</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <div class="project-header">
+            <img src="images/scooter].jpg" alt="Blue Scooter 3D Model" class="project-header-bg">
+            <div class="project-title-box">
+                <span class="project-meta">3D Animation &bull; 2026</span>
+                <h1 class="project-title">Blue Scooter 3D Modeling</h1>
+            </div>
+        </div>
+
+        <div class="project-content">
+            <a href="index.html#portfolio" class="back-link"><i class="ph ph-arrow-left"></i> Back to All Works</a>
+            
+            <div class="project-text">
+                <h3>The Challenge</h3>
+                <p>Creating a photorealistic 3D model of a modern electric scooter, focusing on material accuracy and structural detail. The goal was to demonstrate surface reflections, metallic textures, and ergonomic design in a digital environment.</p>
+                
+                <h3>The Workflow</h3>
+                <p>Modeled using advanced 3D software to ensure every curve and mechanical part is represented accurately. Special attention was given to the lighting setup to highlight the sleek blue finish and the intricate details of the wheel and suspension systems.</p>
+            </div>
+
+            <h3 style="color:var(--text-main); font-family:var(--font-heading); font-size:2rem; margin-top:60px; margin-bottom:30px; text-transform:uppercase;">Model Details</h3>
+            <div class="photo-gallery gallery-full">
+                <img src="images/scooter].jpg" alt="Scooter Render 1">
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> Ashim Kumal. Crafted with passion.</p>
+    </footer>
+
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const navbar = document.querySelector('.navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html>

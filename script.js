@@ -38,47 +38,113 @@ document.addEventListener('DOMContentLoaded', () => {
     const filterBtns = document.querySelectorAll('.filter-btn');
     const portfolioItems = document.querySelectorAll('.portfolio-item');
 
+    function applyFilter(filterValue) {
+        portfolioItems.forEach(item => {
+            let shouldShow = false;
+            
+            if (filterValue === 'all') {
+                shouldShow = item.classList.contains('featured');
+            } else {
+                shouldShow = item.classList.contains(filterValue);
+            }
+
+            if (shouldShow) {
+                item.classList.remove('hide');
+                setTimeout(() => {
+                    item.style.opacity = '1';
+                    item.style.transform = 'scale(1)';
+                }, 10);
+            } else {
+                item.style.opacity = '0';
+                item.style.transform = 'scale(0.8)';
+                setTimeout(() => {
+                    item.classList.add('hide');
+                }, 300);
+            }
+        });
+    }
+
     filterBtns.forEach(btn => {
         btn.addEventListener('click', () => {
-            // Remove active class from all buttons
             filterBtns.forEach(b => b.classList.remove('active'));
-            // Add active class to clicked button
             btn.classList.add('active');
-
-            const filterValue = btn.getAttribute('data-filter');
-
-            portfolioItems.forEach(item => {
-                if (filterValue === 'all' || item.classList.contains(filterValue)) {
-                    item.classList.remove('hide');
-                    setTimeout(() => {
-                        item.style.opacity = '1';
-                        item.style.transform = 'scale(1)';
-                    }, 10);
-                } else {
-                    item.style.opacity = '0';
-                    item.style.transform = 'scale(0.8)';
-                    setTimeout(() => {
-                        item.classList.add('hide');
-                    }, 300);
-                }
-            });
+            applyFilter(btn.getAttribute('data-filter'));
         });
     });
 
-    // Scroll Animation (Intersection Observer)
+    // Initial Filter (Show only featured on load)
+    applyFilter('all');
+
+    // Custom Cursor Logic
+    const cursor = document.querySelector('.custom-cursor');
+    const cursorOutline = document.querySelector('.custom-cursor-outline');
+    let mouseX = 0, mouseY = 0;
+    let cursorX = 0, cursorY = 0;
+    let outlineX = 0, outlineY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    function animateCursor() {
+        // Smooth follow for cursor
+        cursorX += (mouseX - cursorX) * 0.2;
+        cursorY += (mouseY - cursorY) * 0.2;
+        cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0)`;
+
+        // Smooth follow for outline with more delay
+        outlineX += (mouseX - outlineX) * 0.15;
+        outlineY += (mouseY - outlineY) * 0.15;
+        
+        // Dynamic centering based on current width/height
+        const rect = cursorOutline.getBoundingClientRect();
+        const offsetX = rect.width / 2;
+        const offsetY = rect.height / 2;
+        cursorOutline.style.transform = `translate3d(${outlineX - offsetX}px, ${outlineY - offsetY}px, 0)`;
+
+        requestAnimationFrame(animateCursor);
+    }
+    animateCursor();
+
+    // Hover effect for cursor
+    const interactiveElements = document.querySelectorAll('a, button, .portfolio-item, .service-card, .skill-card');
+    interactiveElements.forEach(el => {
+        el.addEventListener('mouseenter', () => document.body.classList.add('cursor-hover'));
+        el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-hover'));
+    });
+
+    // Text hover effect
+    const textElements = document.querySelectorAll('h1, h2, h3, p, .hero-subtitle');
+    textElements.forEach(el => {
+        el.addEventListener('mouseenter', () => document.body.classList.add('cursor-text'));
+        el.addEventListener('mouseleave', () => document.body.classList.remove('cursor-text'));
+    });
+
+
+    // Enhanced Scroll Animation (Intersection Observer with Stagger)
     const reveals = document.querySelectorAll('.reveal');
 
-    const revealObserver = new IntersectionObserver((entries, observer) => {
+    const revealObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
-                observer.unobserve(entry.target); // Stop observing once revealed
+                
+                // If it's a staggered container, animate children
+                if (entry.target.classList.contains('reveal-stagger')) {
+                    const children = entry.target.children;
+                    Array.from(children).forEach((child, index) => {
+                        setTimeout(() => {
+                            child.classList.add('active');
+                            child.style.opacity = '1';
+                            child.style.transform = 'translateY(0)';
+                        }, index * 100);
+                    });
+                }
             }
         });
     }, {
-        root: null,
-        threshold: 0.15,
-        rootMargin: "0px 0px -50px 0px"
+        threshold: 0.1
     });
 
     reveals.forEach(reveal => {
@@ -147,4 +213,43 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
         });
     }
+
+    // Video Modal Logic
+    const videoModal = document.getElementById('videoModal');
+    const modalIframe = document.getElementById('modalIframe');
+    const modalClose = document.querySelector('.modal-close');
+    const videoItems = document.querySelectorAll('.video-item');
+
+    videoItems.forEach(item => {
+        item.addEventListener('click', () => {
+            const videoId = item.getAttribute('data-video-id');
+            const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+            
+            modalIframe.setAttribute('src', videoUrl);
+            videoModal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling
+        });
+    });
+
+    const closeModal = () => {
+        videoModal.classList.remove('active');
+        modalIframe.setAttribute('src', '');
+        document.body.style.overflow = 'auto'; // Restore scrolling
+    };
+
+    modalClose.addEventListener('click', closeModal);
+
+    // Close on click outside content
+    videoModal.addEventListener('click', (e) => {
+        if (e.target === videoModal) {
+            closeModal();
+        }
+    });
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && videoModal.classList.contains('active')) {
+            closeModal();
+        }
+    });
 });
