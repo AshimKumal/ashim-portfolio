@@ -139,11 +139,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const videoItems = document.querySelectorAll('.video-item');
 
     if (videoModal && modalIframe && modalClose) {
+        const videoWrapper = document.querySelector('.video-wrapper');
+
         videoItems.forEach(item => {
             item.addEventListener('click', () => {
                 const videoId = item.getAttribute('data-video-id');
-                const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
-                modalIframe.setAttribute('src', videoUrl);
+                const videoUrlAttr = item.getAttribute('data-video-url');
+                
+                // Clear previous custom video if any
+                const existingVideo = videoWrapper.querySelector('video');
+                if (existingVideo) existingVideo.remove();
+
+                if (videoUrlAttr) {
+                    // For local MP4s, hide iframe and show a native HTML5 video
+                    modalIframe.style.display = 'none';
+                    const videoEl = document.createElement('video');
+                    videoEl.src = videoUrlAttr;
+                    videoEl.controls = true;
+                    videoEl.autoplay = true;
+                    videoEl.style.width = '100%';
+                    videoEl.style.height = '100%';
+                    videoWrapper.appendChild(videoEl);
+                } else if (videoId) {
+                    // For YouTube
+                    modalIframe.style.display = 'block';
+                    const videoUrl = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0`;
+                    modalIframe.setAttribute('src', videoUrl);
+                }
+
                 videoModal.classList.add('active');
                 document.body.style.overflow = 'hidden';
             });
@@ -152,6 +175,11 @@ document.addEventListener('DOMContentLoaded', () => {
         const closeModal = () => {
             videoModal.classList.remove('active');
             modalIframe.setAttribute('src', '');
+            const existingVideo = videoWrapper.querySelector('video');
+            if (existingVideo) {
+                existingVideo.pause();
+                existingVideo.remove();
+            }
             document.body.style.overflow = 'auto';
         };
 
