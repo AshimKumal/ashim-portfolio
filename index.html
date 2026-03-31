@@ -69,6 +69,7 @@
 
     <!-- Phosphor Icons -->
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
 </head>
 
 <body>
@@ -603,16 +604,8 @@
         </div>
     </footer>
 
-    <!-- EmailJS Integration -->
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-        (function () {
-            // Replace 'YOUR_PUBLIC_KEY' with your actual public key
-            emailjs.init({
-                publicKey: env.PUBLIC_KEY,
-            });
-        })();
-    </script>
+    
+
     <!-- Video Modal -->
     <div id="videoModal" class="video-modal">
         <div class="modal-content">
@@ -624,6 +617,12 @@
     </div>
 
     <script src="shared-ui.js"></script>
+    
+    <!-- EmailJS Integration -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <script src="config.js"></script>
+
     <script src="script.js"></script>
 </body>
 

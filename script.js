@@ -1,4 +1,16 @@
+const PUBLIC_KEY = CONFIG.EMAILJS_PUBLIC_KEY;
+const SERVICE_ID = CONFIG.EMAILJS_SERVICE_ID;
+const TEMPLATE_ID = CONFIG.EMAILJS_TEMPLATE_ID;
+
 document.addEventListener('DOMContentLoaded', () => {
+
+    // INIT EMAILJS HERE
+    if (typeof emailjs !== "undefined") {
+        emailjs.init(CONFIG.EMAILJS_PUBLIC_KEY);
+    } else {
+        console.error("EmailJS not loaded");
+    }
+    
     // Portfolio Filtering
     const filterBtns = document.querySelectorAll('.filter-btn');
     const portfolioItems = document.querySelectorAll('.portfolio-item');
@@ -107,7 +119,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Dynamic Check for EmailJS (Simple optimization)
             if (typeof emailjs !== 'undefined') {
-                emailjs.send(env.SERVICE_KEY, env.TEMPLATE_KEY, templateParams)
+                emailjs.send(SERVICE_ID, TEMPLATE_ID, templateParams)
                     .then(() => {
                         btn.innerHTML = 'Message Sent! <i class="ph ph-check-circle"></i>';
                         btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
