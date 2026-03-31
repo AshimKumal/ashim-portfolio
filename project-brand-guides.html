@@ -3,24 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brand Identity Systems | Ashim Kumal</title>
+    <title>Brand Identity Systems & Visual Guidelines | Ashim Kumal Portfolio</title>
+    <meta name="description" content="A comprehensive collection of brand identity systems designed for hospitality, technology, and luxury services in Nepal. Visual guidelines by Ashim Kumal.">
+    <meta name="keywords" content="Brand Identity, Visual Guidelines, Logo Design Nepal, Hospitality Branding, Ashim Kumal, Graphic Design Portfolio">
+    <link rel="canonical" href="https://ashimkumal.com.np/project-brand-guides.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://ashimkumal.com.np/project-brand-guides.html">
+    <meta property="og:title" content="Brand Identity Systems | Ashim Kumal Portfolio">
+    <meta property="og:description" content="Visual identity and branding systems for premium brands in Nepal.">
+    <meta property="og:image" content="https://ashimkumal.com.np/images/brand-guide-atithi.webp">
+
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">ASHIM<span>.</span></a>
-            <ul class="nav-links">
-                <li><a href="index.html">Back to Portfolio</a></li>
-            </ul>
-        </div>
-    </nav>
+    <nav class="navbar"></nav>
 
     <main>
         <div class="project-header">
-            <img src="./images/brand-guide-atithi.jpg" alt="Brand Identity Systems Header" class="project-header-bg">
+            <img src="./images/brand-guide-atithi.webp" alt="Brand Identity Systems Header" class="project-header-bg">
             <div class="project-title-box">
                 <span class="project-meta">Graphic Design & Creative Direction &bull; 2024-2025</span>
                 <h1 class="project-title">Brand Identity Systems</h1>
@@ -40,14 +44,14 @@
 
             <h3 style="color:var(--text-main); font-family:var(--font-heading); font-size:2rem; margin-top:60px; margin-bottom:30px; text-transform:uppercase;">Visual Guidelines Gallery</h3>
             <div class="photo-gallery">
-                <img src="./images/brand-guide-atithi.jpg" alt="Atithi Suites Brand Guide">
-                <img src="./images/brand-guide-anaki.jpg" alt="Anaki Bar Brand Guide">
-                <img src="./images/brand-guide-bar-peepal.jpg" alt="Bar Peepal Resort Brand Guide">
-                <img src="./images/brand-guide-everyday.jpg" alt="Everyday Bakery & Cafe Brand Guide">
-                <img src="./images/brand-guide-jungle-crown.jpg" alt="Hotel Jungle Crown Brand Guide">
-                <img src="./images/brand-guide-majestic.jpg" alt="Majestic Lake Front Brand Guide">
-                <img src="./images/brand-guide-sait.jpg" alt="SAIT Solution Brand Guide">
-                <img src="./images/brand-guide-velvet.jpg" alt="Velvet Luxe Brand Guide">
+                <img src="./images/brand-guide-atithi.webp" alt="Atithi Suites Brand Guide" loading="lazy">
+                <img src="./images/brand-guide-anaki.webp" alt="Anaki Bar Brand Guide" loading="lazy">
+                <img src="./images/brand-guide-bar-peepal.webp" alt="Bar Peepal Resort Brand Guide" loading="lazy">
+                <img src="./images/brand-guide-everyday.webp" alt="Everyday Bakery & Cafe Brand Guide" loading="lazy">
+                <img src="./images/brand-guide-jungle-crown.webp" alt="Hotel Jungle Crown Brand Guide" loading="lazy">
+                <img src="./images/brand-guide-majestic.webp" alt="Majestic Lake Front Brand Guide" loading="lazy">
+                <img src="./images/brand-guide-sait.webp" alt="SAIT Solution Brand Guide" loading="lazy">
+                <img src="./images/brand-guide-velvet.webp" alt="Velvet Luxe Brand Guide" loading="lazy">
             </div>
 
             <div class="project-text">
@@ -63,20 +67,8 @@
         </div>
     </main>
 
-    <footer>
-        <p>&copy; <span id="year"></span> Ashim Kumal. Crafted with passion.</p>
-    </footer>
+    <footer></footer>
 
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-        const navbar = document.querySelector('.navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-    </script>
+    <script src="shared-ui.js"></script>
 </body>
 </html>

@@ -3,24 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project Case Study | Ashim Kumal</title>
+    <title>Web Architecture & UI/UX Case Study | Ashim Kumal</title>
+    <meta name="description" content="A detailed UI/UX design case study on building high-conversion digital experiences. Exploring user research, dark-mode aesthetics, and micro-interactions in Nepal.">
+    <meta name="keywords" content="UI/UX Case Study, Web Architecture, Figma, Ashim Kumal, Digital Design Portfolio Nepal">
+    <link rel="canonical" href="https://ashimkumal.com.np/project-details.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://ashimkumal.com.np/project-details.html">
+    <meta property="og:title" content="Web Architecture & UI/UX Case Study | Ashim Kumal">
+    <meta property="og:description" content="In-depth look at visual design strategy and mobile-first architecture.">
+    <meta property="og:image" content="https://ashimkumal.com.np/images/web-2.webp">
+
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">ASHIM<span>.</span></a>
-            <ul class="nav-links">
-                <li><a href="index.html">Back to Portfolio</a></li>
-            </ul>
-        </div>
-    </nav>
+    <nav class="navbar"></nav>
 
     <main>
         <div class="project-header">
-            <img src="https://ashimkumal.com.np/wp-content/uploads/2025/06/web-2.png" alt="Project Banner" class="project-header-bg">
+            <img src="images/web-2.webp" alt="Project Banner" class="project-header-bg">
             <div class="project-title-box">
                 <span class="project-meta">UI/UX Design &bull; 2026</span>
                 <h1 class="project-title">Web Architecture</h1>
@@ -46,28 +50,16 @@
 
             <h3 style="color:var(--text-main); font-family:var(--font-heading); font-size:2rem; margin-top:60px; margin-bottom:30px; text-transform:uppercase;">Project Gallery</h3>
             <div class="photo-gallery">
-                <img src="https://ashimkumal.com.np/wp-content/uploads/2025/06/satmarga-education-consultancy-min-scaled.png" alt="Satmarga Education">
-                <img src="https://ashimkumal.com.np/wp-content/uploads/2025/06/nepal-world-education-min-scaled.png" alt="Nepal World Education">
-                <img src="https://ashimkumal.com.np/wp-content/uploads/2025/06/ACIC-min-scaled.png" alt="ACIC Design">
-                <img src="https://ashimkumal.com.np/wp-content/uploads/2025/06/longlife-pharma-min-1-scaled.png" alt="Longlife Pharma">
+                <img src="images/satmarga-education-consultancy-min-scaled.webp" alt="Satmarga Education">
+                <img src="images/nepal-world-education-min-scaled.webp" alt="Nepal World Education">
+                <img src="images/ACIC-min-scaled.webp" alt="ACIC Design">
+                <img src="images/longlife-pharma-min-1-scaled.webp" alt="Longlife Pharma">
             </div>
         </div>
     </main>
 
-    <footer>
-        <p>&copy; <span id="year"></span> Ashim Kumal. Crafted with passion.</p>
-    </footer>
+    <footer></footer>
 
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-        const navbar = document.querySelector('.navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-    </script>
+    <script src="shared-ui.js"></script>
 </body>
 </html>

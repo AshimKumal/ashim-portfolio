@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ashimkumal.com.np/sitemap.xml

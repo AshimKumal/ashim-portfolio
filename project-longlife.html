@@ -3,24 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Longlife Pharma | Ashim Kumal</title>
+    <title>Longlife Pharma Branding | Graphic Design by Ashim Kumal</title>
+    <meta name="description" content="Modern visual identity and branding for Longlife Pharma. A healthcare branding project emphasizing safety, trust, and longevity in Nepal.">
+    <meta name="keywords" content="Longlife Pharma, Healthcare Branding, Pharmaceutical Design, Ashim Kumal, Logo Design Nepal">
+    <link rel="canonical" href="https://ashimkumal.com.np/project-longlife.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://ashimkumal.com.np/project-longlife.html">
+    <meta property="og:title" content="Longlife Pharma Branding | Ashim Kumal Portfolio">
+    <meta property="og:description" content="Refined visual identity for a pharmaceutical company in Nepal.">
+    <meta property="og:image" content="https://ashimkumal.com.np/images/longlife-pharma-min-1-scaled.webp">
+
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="index.html" class="logo">ASHIM<span>.</span></a>
-            <ul class="nav-links">
-                <li><a href="index.html">Back to Portfolio</a></li>
-            </ul>
-        </div>
-    </nav>
+    <nav class="navbar"></nav>
 
     <main>
         <div class="project-header">
-            <img src="https://ashimkumal.com.np/wp-content/uploads/2025/06/longlife-pharma-min-1-scaled.png" alt="Longlife Pharma" class="project-header-bg">
+            <img src="images/longlife-pharma-min-1-scaled.webp" alt="Longlife Pharma" class="project-header-bg">
             <div class="project-title-box">
                 <span class="project-meta">Graphic Design &bull; 2024</span>
                 <h1 class="project-title">Longlife Pharma Branding</h1>
@@ -40,26 +44,14 @@
 
             <h3 style="color:var(--text-main); font-family:var(--font-heading); font-size:2rem; margin-top:60px; margin-bottom:30px; text-transform:uppercase;">Project Gallery</h3>
             <div class="photo-gallery">
-                <img src="https://ashimkumal.com.np/wp-content/uploads/2025/06/longlife-pharma-min-1-scaled.png" alt="Longlife Pharma Visual 1">
-                <img src="https://ashimkumal.com.np/wp-content/uploads/2025/06/longlife-pharma-min-1-scaled.png" alt="Longlife Pharma Visual 2">
+                <img src="images/longlife-pharma-min-1-scaled.webp" alt="Longlife Pharma Visual 1">
+                <img src="images/longlife-pharma-min-1-scaled.webp" alt="Longlife Pharma Visual 2">
             </div>
         </div>
     </main>
 
-    <footer>
-        <p>&copy; <span id="year"></span> Ashim Kumal. Crafted with passion.</p>
-    </footer>
+    <footer></footer>
 
-    <script>
-        document.getElementById('year').textContent = new Date().getFullYear();
-        const navbar = document.querySelector('.navbar');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-    </script>
+    <script src="shared-ui.js"></script>
 </body>
 </html>
