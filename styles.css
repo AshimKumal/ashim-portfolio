@@ -1088,7 +1088,7 @@ footer {
   .about-image {
     max-width: 500px;
     margin: 0 auto;
-    aspect-ratio: 16/9;
+    aspect-ratio: 4/5;
   }
 
   .approach-container,
@@ -1128,12 +1128,20 @@ footer {
   .hero-title {
     font-size: 3rem;
   }
+
+  .section-padding {
+    padding: 80px 5%;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
 }
 
 @media(max-width: 480px) {
   .about-image {
-    /* height: 290px; */
-    width: 380px;
+    width: 100%;
+    max-width: 380px;
     margin: 0 auto;
   }
 
@@ -1148,12 +1156,11 @@ footer {
 
   .portfolio-grid {
     grid-template-columns: 1fr;
-    align-content: center;
   }
 
   .portfolio-item {
-    align-items: center;
-    width: 320px;
+    width: 100%;
+    height: 300px;
   }
 
   .about-text,
@@ -1165,6 +1172,14 @@ footer {
   .contact-item {
     flex-direction: column;
     gap: 5px;
+  }
+
+  .section-padding {
+    padding: 60px 5%;
+  }
+
+  .section-title {
+    font-size: 2rem;
   }
 }
 
